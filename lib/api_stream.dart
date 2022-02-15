@@ -36,7 +36,7 @@ class _APIStreamState extends State<APIStream> {
   }
 
   Future<void> getCryptoPrice() async{
-    var url=Uri.parse('https://api.nomics.com/v1/currencies/ticker?key=322d4d15fecfd9b69fdbcf63dd397cda804be508&ids=ETH');
+    var url=Uri.parse('https://api.nomics.com/v1/currencies/ticker?key='YOUR_KEY'=ETH');
     final response=await http.get(url);
     print(response);
     final databody=json.decode(response.body).first;
